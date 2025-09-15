@@ -1,0 +1,38 @@
+{
+  "name": "wcs_checkpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "ts-node-dev ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Le-TRex/Checkpoint_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Le-TRex/Checkpoint_Backend/issues"
+  },
+  "homepage": "https://github.com/Le-TRex/Checkpoint_Backend#readme",
+  "type": "module",
+  "dependencies": {
+    "class-validator": "^0.14.2",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.26"
+  },
+  "devDependencies": {
+    "@apollo/server": "^4.10.2",
+    "@types/node": "^24.4.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "ts-node-dev": "^2.0.0",
+    "type-graphql": "^2.0.0-beta.6",
+    "typeorm": "^0.3.20"
+  }
+}
