@@ -13,13 +13,14 @@ import { dataSource } from "./config/db";
 
 // Resolvers
 import { PaysResolver } from "./resolvers/PaysResolver";
+import { ContinentResolver } from "./resolvers/ContinentResolver";
 
 // Config/démarrage du serveur Apollo
 const port = 4000;
 
 async function startServer() {
   await dataSource.initialize();
-  const schema = await buildSchema({resolvers: [PaysResolver]});
+  const schema = await buildSchema({resolvers: [PaysResolver, ContinentResolver]});
   const apolloServer = new ApolloServer({schema});
   const { url } = await startStandaloneServer(apolloServer, {
     listen: { port },

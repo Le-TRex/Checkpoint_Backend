@@ -3,6 +3,7 @@ import { Field, InputType, Resolver, Query, Arg, Mutation, ID } from "type-graph
 
 // Entités
 import { Pays } from "../entities/Pays";
+import { Continent } from "../entities/Continent";
 
 @InputType()
 class PaysInput {
@@ -16,7 +17,7 @@ class PaysInput {
   emoji!: string;
 
   @Field()
-  continent!: number;
+  continent!: Continent;
 }
 
 @Resolver(Pays)
@@ -44,11 +45,12 @@ export class PaysResolver {
   @Query(() => [Pays])
   async getPaysByContinent(@Arg("continent") continent: number) {
     try {
-      const paysParContinent = await Pays.find({
+      const getPaysParContinent = await Pays.find({
         relations: {
           continent: true,
         }
       })
+      return getPaysParContinent;
     } catch (error) {
       console.info(error)
     }
