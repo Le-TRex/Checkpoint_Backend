@@ -16,7 +16,7 @@ class PaysInput {
   @Field()
   emoji!: string;
 
-  @Field()
+  @Field(() => ID)
   continent!: Continent;
 }
 

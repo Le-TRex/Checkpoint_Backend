@@ -29,31 +29,31 @@ const pays = [
     code: "FR",
     nom: "France",
     emoji: "🇫🇷",
-    continent: 5,
+    continent: 4,
   },
   {
     code: "DE",
     nom: "Allemagne",
     emoji: "🇩🇪",
-    continent: 5,
+    continent: 4,
   },
   {
     code: "IR",
     nom: "Irlande",
     emoji: "🇮🇪",
-    continent: 5,
+    continent: 4,
   },
   {
     code: "DK",
     nom: "Danemark",
     emoji: "🇩🇰",
-    continent: 5,
+    continent: 4,
   },
   {
     code: "JP",
     nom: "Japon",
     emoji: "🇯🇵",
-    continent: 3,
+    continent: 5,
   }
 ]
 
