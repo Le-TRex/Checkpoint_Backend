@@ -14,30 +14,6 @@ import { dataSource } from "./config/db";
 // Resolvers
 import { PaysResolver } from "./resolvers/PaysResolver";
 
-// Seed
-const pays = [
-  {
-    code: "FR",
-    nom: "France",
-    emoji: "🇫🇷",
-  },
-  {
-    code: "DE",
-    nom: "Allemagne",
-    emoji: "🇩🇪",
-  },
-  {
-    code: "IR",
-    nom: "Irlande",
-    emoji: "🇮🇪",
-  },
-  {
-    code: "DK",
-    nom: "Danemark",
-    emoji: "🇩🇰",
-  },
-]
-
 // Config/démarrage du serveur Apollo
 const port = 4000;
 

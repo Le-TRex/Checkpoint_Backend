@@ -1,8 +1,11 @@
 // TypeORM
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 // GraphQl
 import { Field, ObjectType } from "type-graphql";
+
+// Continents
+import { Continent } from "./Continent";
 
 @Entity()
 @ObjectType()
@@ -22,5 +25,8 @@ export class Pays extends BaseEntity {
   @Column({ unique: true})
   @Field()
   emoji!: String;
-}
 
+  @Field(() => Continent)
+  @ManyToOne(() => Continent, (continent) => continent.pays)
+  continent!: Continent
+}
