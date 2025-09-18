@@ -26,7 +26,9 @@ export class Pays extends BaseEntity {
   @Field()
   emoji!: String;
 
+  // @ManyToOne contient une fonction qui renvoie le type de l'élément lié (un pays n'appartient qu'à un continent)
+  // eager permet de signifier qu'on pourra obtienir le continent dans le résultat de la requête pour obtenir des pays
   @ManyToOne(() => Continent, { eager: true })
-  @Field(() => Continent)
-  continent!: Continent;
+  @Field(() => Continent) // Le champ va contenir un élément de type Continent
+  continent!: Continent; // La propriété continent contiendra un élément de type Continent
 }
