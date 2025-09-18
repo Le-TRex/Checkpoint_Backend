@@ -20,5 +20,5 @@ export class Continent extends BaseEntity {
 
   @OneToMany(() => Pays, (pays) => pays.continent)
   @Field(() => [Pays])
-  pays?: [Pays]; // Lors de la création d'un continent, le tableau des pays associés peut-être vide
+  pays?: Pays[]; // Lors de la création d'un continent, le tableau des pays associés peut-être vide
 }
